@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Juego de Memoria</title>
+  <link rel="stylesheet" type="text/css" href="estilo3.css">
+</head>
+
+<body>
+  <section id="pantalla-instrucciones">
+    <h1>¡Memory Game!</h1>
+    <div id="instrucciones-texto">
+      <h3>Instrucciones:</h3>
+      <p>¡Felicidades por llegar al Nivel 2!! En este nivel, pondrás a prueba tus habilidades de conversión de
+        direcciones IP, reforzando tu comprensión sobre la representación binaria y decimal de las direcciones IP. </p>
+      <p>Tendrás un tablero que contiene 12 cuadros con imágenes ocultas.</p>
+      <p>Haz clic en un cuadro para voltear la imagen y revelar una dirección IP, esta puede estar en forma binaria o
+        decimal.</p>
+      <p>A continuación, selecciona otro cuadro para voltear otra imagen y revelar otra dirección IP.</p>
+      <p>Si las dos imágenes reveladas corresponden a la misma dirección IP, una en forma binaria y la otra en forma
+        decimal habrás encontrado un par correcto. Ambas imágenes permanecerán visibles.</p>
+      <p>Si las dos imágenes reveladas no corresponden a la misma dirección IP, se volverán a ocultar. </p>
+      <p>Recuerda su ubicación para intentarlo nuevamente más adelante.</p>
+      <p>Continúa seleccionando cuadros y buscando pares correctos hasta que hayas encontrado todos.</p>
+      <p>El juego finalizará cuando hayas emparejado todas las direcciones IP correctamente.</p>
+      <p>A lo largo del juego, el tiempo que tardes en completar el nivel se registrará para establecer tu puntuación.
+      </p>
+
+    </div>
+    <button id="jugar">JUGAR</button>
+  </section>
+
+  <section id="pantalla-inicial">
+    <h1>Memory Game</h1>
+    <button id="startButton">Iniciar juego</button>
+    <p id="timer"></p>
+
+
+    <div id="card-container">
+    </div>
+    <div id="gameBoard"></div>
+    <div id="gameControls">
+      <button id="finishButton" onclick="finalResumen()" disabled>Finalizar juego</button>
+    </div>
+
+
+
+  </section>
+
+  <section id="pantalla-ejemplo">
+    <ul id="contenedor-ejemplo">
+      <li><button onclick="mostrarImagen('enunciado.jpg')">Enunciado Ejemplo</button></li>
+      <li><button onclick="mostrarImagen('clase.jpg')">Indentifica Clase de la IP</button></li>
+      <li><button onclick="mostrarImagen('numeroRedes.jpg')">Número de redes</button></li>
+      <li><button onclick="mostrarImagen('numeroHost.jpg')">Número de host</button></li>
+      <li><button onclick="mostrarImagen('mascaraAdaptada.jpg')">Máscara Adaptada</button></li>
+    </ul>
+
+    <div id="imagen">
+      <img id="imagenMostrada" src="" alt="Imagen">
+    </div>
+  </section>
+
+  <section id="pantalla-final">
+    <div id="gameDetails" style="display: none;">
+      <h2>Detalles del juego</h2>
+      <p id="timeElapsed"></p>
+      <p id="matches"></p>
+      <p id="moves"></p>
+      
+    </div>
+    <button id="reporte-final">Mostrar Reporte final - Partida</button>  
+  </section>
+  
+
+  <section id="reporte-final-partida">
+    <h1>Resumen Final de la Partida</h1>
+    <h2>Nivel 1</h2>
+    <h3>Aciertos:</h3> <span id="nivel1-aciertos">11</span>
+
+    <h2>Nivel 2</h2>
+    <h3>Aciertos:</h3>  <span id="nivel2-aciertos">22</span>
+
+    <h2>Nivel 3</h2>
+    <h3>Aciertos:</h3> 
+    <span id="nivel3-aciertos"> 10</span>
+
+  </section>
+
+
+
+  <script src="script3.js" ></script>
+  <script src='../nivel1/script1.js' ></script>
+  <script src='../nivel2/script.js' ></script>
+</body>
+
+</html>

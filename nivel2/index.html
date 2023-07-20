@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flags Game</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h3>Drag & Drop - Escoge el equivalente en Binario</h3>
+    <span id="tiempo" class="tiempo-destacado">Tiempo</span>
+    <div class="draggable-objects"></div>
+    <div class="drop-points"></div>
+    <button id="regresoNivel2"><a href="..\nivel1\index1.html">Volver al Nivel 1</a></button>
+
+  </div>
+  <div class="controls-container">
+    <p id="result"></p>
+    <button id="start">Continuar</button>
+  </div>
+  <section id="pantalla-final">
+    <h1>Resumen</h1>
+    <h3>Puntaje Obtenido</h3>
+    <span id="acertadas">
+      0
+    </span>
+    <h3 id="score1">40% de acierto</h3>
+
+  </section>
+  </section>
+  <section id="pasar-nivel">
+    <h1>Felicidades!</h1>
+    <h3>Pasaste al siguiente Nivel</h3>
+    <button id="Continuar"><a href="..\nivel3\index3.html">Nivel 3: Memory Game</a></button>
+  </section>
+
+  </section>
+  <section id="no-pasar-nivel">
+    <h1>Lo siento!</h1>
+    <h3>No pasaste al siguiente Nivel</h3>
+    <button id="regresoNivel1"><a href="..\nivel1\index1.html">Volver al Nivel 1</a></button>
+    <div id="timer"></div>
+  </section>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>

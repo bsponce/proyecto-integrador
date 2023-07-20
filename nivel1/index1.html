@@ -1,0 +1,97 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Mini Juego de Preguntas y Respuestas</title>
+  <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+
+<body>
+  
+  
+  <section id="pantalla-inicial">
+    <h1>¡Bienvenido a Subnet Master!</h1>
+    <h3>Demuestra tus habilidades, supera obstáculos a lo largo de diferentes niveles, que reforzaran tus conceptos.</h3>
+    <button id="comenzar">COMENZAR</button>
+  </section>
+ 
+
+  <section id="pantalla-instrucciones">
+    <h1>¡QuizMaster!</h1>
+    <div id="instrucciones-texto">
+      <h3>Instrucciones:</h3>
+      <p>El objetivo de este nivel es poner a prueba tus conocimientos para adentrarte al mundo del Subnetting, Se te realizan varias preguntas, así que leelas cuidadosamente y selecciona la opción que consideres correcta. </p>
+      <p>Tendrás un cronómetro que medirá el tiempo que tardas en responder cada pregunta. Cuanto más rápido respondas, mayor será tu puntuación.</p>
+      <p>Antes de comenzar, te recomendamos que repases algunos conceptos clave de subnetting para asegurarte de entender bien el tema. A continuación, encontrarás una breve teoría que te ayudará a refrescar tus conocimientos.</p>
+      <p>- Una red es un grupo de dispositivos interconectados que se comunican entre sí utilizando direcciones IP.</p>
+      <p>- Las direcciones IP son números únicos asignados a cada dispositivo conectado a una red.</p>
+      <p>- Existen dos tipos de direcciones IP: IPv4 e IPv6. En este juego, nos centraremos en IPv4.s</p>
+      <p>- Las direcciones IPv4 están compuestas por cuatro números separados por puntos (por ejemplo, 192.168.0.1).</p>
+      <p>- Para poder comunicarse en una red, los dispositivos deben tener una dirección IP válida y una máscara de subred.</p>
+      <p>- La máscara de subred se utiliza para dividir la dirección IP en una parte de red y una parte de host.</p>
+      <p>- El subnetting es el proceso de dividir una red en subredes más pequeñas para optimizar el uso de direcciones IP.</p>
+      <p>Antes de comenzar con el aprendizaje del subnetting, asegúrate de entender los conceptos básicos de redes, como direcciones IP, clases de direcciones, máscaras de subred y enrutamiento.</p>
+      <p>Una vez que te sientas preparado, haz clic en el botón "JUGAR" para iniciar el desafío.</p>
+
+
+    </div>
+  <button id="jugar">JUGAR</button>
+  </section>
+
+  <section id="pantalla-juego">
+    <div class="container">
+      <span id="tiempo"class="tiempo-destacado">Tiempo</span>
+    </div>
+    <div id="question-container">
+      <h2 id="question">¿Pregunta?</h2>
+      <ul id="answers">
+        <li><button onclick="checkAnswer(0)">Respuesta 1</button></li>
+        <li><button onclick="checkAnswer(1)">Respuesta 2</button></li>
+        <li><button onclick="checkAnswer(2)">Respuesta 3</button></li>
+        <li><button onclick="checkAnswer(3)">Respuesta 4</button></li>
+      </ul>
+    </div>
+
+    <div id="result-container">
+      <p id="result"></p>
+      <button onclick="nextQuestion()">Siguiente Pregunta</button>
+    </div>
+  </section>
+
+  </section>
+  <section id="pantalla-final">
+    <h1>Resumen</h1>
+    <h3>Puntaje Obtenido</h3>
+    <span id="acertadas">
+      10
+    </span>
+    
+    
+  </section>
+
+  <section id="pasar-nivel">
+    <h1>Felicidades!</h1>
+    <h3>Pasaste al siguiente Nivel</h3>
+    <button id="Continuar"><a href="..\nivel2\index.html">Nivel 2: Drag and Drog</a></button>
+  </section>
+
+  </section>
+  <section id="no-pasar-nivel">
+    <h1>Lo siento!</h1>
+    <h3>No pasaste al siguiente Nivel</h3>
+    
+    <button id="recomenzar"><a href="..\nivel1\index1.html">Jugar de Nuevo</a></button>
+  </section>
+
+  </section>
+  <section id="game-over">
+    <h1>Lo siento! Tus intentos se agotaron</h1>
+    <h3>¡JUEGO TERMINADO!</h3>
+  </section>
+  
+  <script src="script1.js"></script>
+</body>
+
+</html>

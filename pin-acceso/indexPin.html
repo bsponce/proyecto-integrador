@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PIN de acceso</title>
+  <link rel="stylesheet" href="stylePin.css" />
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<meta charset="UTF-8">
+
+<body>
+  <section id="elegir-rol">
+    <div class="elegir-rol">
+      <h1>Elija su rol de jugador</h1>
+      <button id="profesor">Profesor</button>
+      <button id="estudiante">Estudiante</button>
+    </div>
+  </section>
+
+  <section id="seccion2">
+    <form id="pinForm">
+      <label for="pin">Ingrese su PIN (4 caracteres):</label>
+      <input type="text" id="pin" maxlength="4">
+      <span id="error" class="error"></span>
+      <br>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section id="seccion3">
+    <div class="container">
+      <header>
+        <i class="bx bxs-check-shield"></i>
+      </header>
+
+      <h4>Ingrese el PIN</h4>
+      <form action="#">
+        <div class="input-field">
+          <input type="number" />
+          <input type="number" disabled />
+          <input type="number" disabled />
+          <input type="number" disabled />
+        </div>
+        <button id="button">Verify</button>
+      </form>
+    </div>
+  </section>
+
+  
+  <script src="scriptPin.js"></script>
+</body>
+</html>

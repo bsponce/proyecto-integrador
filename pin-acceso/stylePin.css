@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600;700&display=swap');
+*{
+    box-sizing: border-box;/* puede ser útil para mantener un mejor control sobre el diseño y el posicionamiento de los elementos en una página*/
+}
+#elegir-rol {
+  display: block; /* Mostrar la sección por defecto */
+}
+
+#seccion2, #seccion3 {
+  display: none; /* Ocultar otras secciones por defecto */
+}
+
+
+body {
+   
+    /*text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;*/
+    font-family: 'Rajdhani'; /*Establece la fuente de la familia de fuentes a utilizar para el texto dentro del <body>*/
+    background-image: url('imagen.jpg'); /*imagen de fondo*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;/*Fija la posición de la imagen de fondo para que no se desplace al hacer scroll en la página.*/
+    background-size: cover;/*Ajusta automáticamente el tamaño de la imagen de fondo para cubrir completamente el área del <body>*/
+    background-color: rgba(85, 183, 208, 0.503);
+  }
+.error {
+  color: rgb(234, 25, 25);
+}
+#elegir-rol {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 200px;
+  font-family: 'Rammetto One';
+}
+
+.elegir-rol button {
+  margin-right: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #4faf96;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background: #6e93f7;
+}
+
+#seccion2, #seccion3 {
+  display: none;
+  margin-top: 30px;
+}
+
+
+#successMessage {
+  background-color: #f0f0f0;
+  border: 1px solid #4faf96;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Rammetto One';
+  font-size: 18px;
+  color: #333;
+  text-align: center; /* Centrar el texto horizontalmente */
+  max-width: 300px; /* Limitar la longitud máxima del rectángulo */
+  margin: 200px auto 0; /* Centrar el rectángulo horizontalmente y desplazarlo hacia abajo */
+}
+#pinForm {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  
+  margin: 200px auto 0; /* Centrar el rectángulo horizontalmente y desplazarlo hacia abajo */
+}
+
+#pinForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#pinForm input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#pinForm button[type="submit"] {
+
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px; /* Desplazar el botón hacia abajo */
+  background: #6e93f7;
+}
+#seccion3 {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  
+  margin: 200px auto 0; /* Centrar el rectángulo horizontalmente y desplazarlo hacia abajo */
+}
+
+
+
+  /* Estilos para los botones específicos de sección3 */
+  form button {
+    margin-top: 25px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    padding: 9px 0;
+    cursor: pointer;
+    border-radius: 6px;
+   
+    background: #6e93f7;
+    transition: all 0.2s ease;
+  }
+ 
+
+
+  /* Estilos para los botones específicos de sección3 */
+  :where(.container, form, .input-field, header) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    background: #fff;
+    padding: 30px 65px;
+    border-radius: 12px;
+    row-gap: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .container header {
+    height: 65px;
+    width: 65px;
+    background: #4070f4;
+    color: #fff;
+    font-size: 2.5rem;
+    border-radius: 50%;
+  }
+  .container h4 {
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: 500;
+  }
+  form .input-field {
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  .input-field input {
+    height: 45px;
+    width: 42px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 1.125rem;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  .input-field input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+  .input-field input::-webkit-inner-spin-button,
+  .input-field input::-webkit-outer-spin-button {
+    display: none;
+  }
+  form button.active {
+    background: #4070f4;
+    pointer-events: auto;
+  }
+  form button:hover {
+    background: #0e4bf1;
+  }
+  

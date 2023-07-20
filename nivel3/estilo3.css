@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  /* puede ser útil para mantener un mejor control sobre el diseño y el posicionamiento de los elementos en una página*/
+}
+#pasar-nivel{
+  display: none;
+}
+#pantalla-ejemplo{
+  display: none;
+}
+
+#no-pasar-nivel{
+  display: none;
+}
+#reporte-final-partida{
+  display: none;
+}
+
+body {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /*text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;*/
+  font-family: 'Rajdhani';
+  /*Establece la fuente de la familia de fuentes a utilizar para el texto dentro del <body>*/
+
+  background-image: url('imagen.jpg');
+  background-size: cover;
+  /*Ajusta automáticamente el tamaño de la imagen de fondo para cubrir completamente el área del <body>*/
+}
+
+h1 {
+  color: #6a0dad;
+  margin-top: 40px;
+  text-align: center;
+}
+#pantalla-inicial{
+  display: none;
+}
+
+#pantalla-instrucciones {
+  
+  font-family: 'Rammetto One';
+  /* max-width: 400px; */
+  /*ancho*/
+  width: 70%;
+  margin: 0 auto;
+  /*centrar cuadro*/
+  text-align: auto;
+  background: rgba(131, 89, 222, 0.7);
+  padding: 80px;
+  /*largo cuadro*/
+  border: 2px solid #000;
+  border-radius: 20px;
+}
+
+#pantalla-inicial h1 {
+  margin-bottom: 20px;
+  /*mover boton*/
+  padding: 10px -100px;
+  /*mover texto "subnet master"*/
+  font-family: 'Rammetto One';
+  font-size: 60px;
+  color: #4a68e0;
+  -webkit-text-stroke: 0.2px #ebe2e2;
+  /* Color y grosor del contorno */
+  text-align: center;
+
+}
+
+
+html {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(325deg, #03001e 0%, #7303c0 30%, #ec38bc 70%, #fdeff9 100%);
+  font-family: Arial, Helvetica, sans-serif;
+
+
+}
+/* 
+
+.card {
+  width: 180px; 
+  height: 150px;
+  background-color: #f2f2f2;
+  background-size: cover;
+  background-position: center;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+} 
+ */
+
+ #gameBoard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 900px; /* Ancho máximo del tablero */
+  margin: 0 auto; /* Centrar el tablero en la página */
+}
+
+
+.card {
+  
+  width: 180px; /*ancho cartas*/
+  height: 100px;/*largo cartas*/
+  background: #171717ac;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #000;
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+} 
+
+.card-front,
+.card-back {
+  position: absolute;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  background: #282A3A;
+  transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+  backface-visibility: hidden;
+}
+
+button {
+  background-color: #4a68e0;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin: 0 20px;
+  border-radius: 30px;
+  border-bottom: 4px solid #4b0872;
+  font-size: 20px;
+
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+#gameControls {
+  margin-top: 10px;
+}
+
+
+#pantalla-final {
+  font-family: 'Rammetto One';
+  display: none;
+ 
+  max-width: 325px;
+  margin: 10px 50px 10px;/*da un margen de 10px en el lado superior del elemento y 50px lado inferior
+  /* centrar verticalmente y 50px de margen en la parte inferior */
+  text-align: center;
+  background: rgba(131, 89, 222, 0.7);
+  padding: 12px;/*separa del borde 12px, en todas las dimensiones*/
+  border: 2px solid #000;
+  border-radius: 20px;
+  float: left; /* Alinear la sección a la izquierda de la pantalla */
+}
+
+#card-container {
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  margin: 5px auto 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 640px;/*ancho del contenedor de las cartas*/
+  border-radius: 5px;
+  box-shadow: 0 25px 50px rgb(33 33 33 / 25%);
+  background: linear-gradient(135deg, #03001e 0%, #7303c0 0%, #ec38bc 50%, #fdeff9 100%);
+  transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+  backface-visibility: hidden;
+}
+
+.flipped {
+  background-image: none;
+}
+
+#pantalla-ejemplo {
+  font-family: 'Rammetto One';
+  
+  max-width: 325px;
+  margin:125px auto; /*centrar cuadro*/
+  margin-top: 100px; /*subir y bajar el cuadro*/
+  text-align: center;
+  background:rgba(191, 205, 215, 0.7);
+  padding: 30px;/*tamano del cuadro*/
+  border: 2px solid #000;
+  border-radius: 20px; 
+}
+#pantalla-ejemplo img {
+  max-width: 180%;
+  height: auto;
+}
+.card-image {
+  width: 50%;
+  height: auto;
+}
+#reporte-final-partida {
+  font-family: 'Rammetto One';
+  
+  max-width: 325px;
+  margin:125px auto; /*centrar cuadro*/
+  margin-top: 200px; /*subir y bajar el cuadro*/
+  text-align: center;
+  background:rgba(191, 205, 215, 0.7);
+  padding: 30px;/*tamano del cuadro*/
+  border: 2px solid #000;
+  border-radius: 20px; 
+}
+#reporte-final-partida span{
+   
+  display: block;
+  background: #000;
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin:auto;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 25%;
+  margin-bottom: 30px;
+}
