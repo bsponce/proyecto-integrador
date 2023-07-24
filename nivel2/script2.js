@@ -1,3 +1,4 @@
+
 //Initial References
 let draggableObjects;
 let dropPoints;
@@ -47,6 +48,18 @@ let initialX = 0,
 let currentElement = "";
 let moveElement = false;
 
+
+document.getElementById("jugar").addEventListener("click", () => {
+  // Ocultar las instrucciones
+  document.getElementById("pantalla-instrucciones").style.display = "none";
+
+  // Mostrar el juego
+  document.getElementById("juego").style.display = "block";
+
+  // Aquí puedes iniciar el juego o cualquier otra lógica necesaria
+});
+
+
 largarTiempo();
 //detectar si el dispositivo en el que se ejecuta es táctil
 const isTouchDevice = () => {
@@ -67,6 +80,7 @@ let count = 0; //cuenta aciertos
 /*const randomValueGenerator = () => {
   return data[Math.floor(Math.random() * data.length)];
 };*/
+
 const randomValueGenerator = () => {
   if (generatedValues.size === data.length) {
     return -1;
@@ -138,6 +152,7 @@ function dragStart(e) {
     e.dataTransfer.setData("text", e.target.id);
   }
 }
+
 //Esta función se ejecuta cuando un elemento arrastrado se encuentra sobre el área de soltar (drop zone).
 function dragOver(e) {
   e.preventDefault();
@@ -160,6 +175,9 @@ const touchMove = (e) => {
     initialY - newY;
   }
 };
+
+
+
 // se encarga de manejar la acción de soltar un elemento arrastrado en un área de soltar.
 const drop = (e) => {
   e.preventDefault();//si no se llama a este metodo, puede haber interacción no deseada, por parte del navegador, puede abrir el elemento como enlace
@@ -217,7 +235,6 @@ const drop = (e) => {
       usedImages.push(newImageSrc);
       //count -= 1;
 
-
     }
   } else {
     //Access data
@@ -258,7 +275,6 @@ const drop = (e) => {
       // Agregar la ruta a la lista de imágenes utilizadas
       //count -= 1;
 
-
     }
   }
   //Win
@@ -279,10 +295,10 @@ const drop = (e) => {
     document.getElementById("score1").textContent = ((count * 100) / data.length).toFixed(2) + "% de acierto";
   }
 
-
-
-
 };
+
+
+
 
 //crear y configurar los elementos dentro de los contenedores
 const creator = () => {
@@ -332,8 +348,7 @@ const creator = () => {
 };
 
 //Start Game
-startButton.addEventListener(
-  "click",
+startButton.addEventListener(  "click",
   (startGame = async () => {
     currentElement = "";
     controls.classList.add("hide");
@@ -372,3 +387,5 @@ startButton.addEventListener(
 }
 export{obtenerAciertosNivel2};
 //obtenerAciertosNivel2();*/
+
+

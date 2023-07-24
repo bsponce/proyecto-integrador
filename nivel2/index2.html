@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flags Game</title>
+  <title>Convert Quest</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <!-- Stylesheet -->
@@ -11,42 +12,64 @@
 </head>
 
 <body>
-  <div class="container">
-    <h3>Drag & Drop - Escoge el equivalente en Binario</h3>
-    <span id="tiempo" class="tiempo-destacado">Tiempo</span>
-    <div class="draggable-objects"></div>
-    <div class="drop-points"></div>
-    <button id="regresoNivel2"><a href="..\nivel1\index1.html">Volver al Nivel 1</a></button>
 
+  <section id="pantalla-instrucciones">
+    <h1>¡Convert Quest!</h1>
+    <div id="instrucciones-texto">
+      <h3 id="titulo-instrucciones">Instrucciones:</h3>
+      <p>¡Felicidades por llegar al Nivel 2!! En este nivel, demostrarás tus habilidades de conversion de números 
+        decimales a binarios y tu velocidad para responder bajo presión.</p>
+      <p>Al iniciar el juego, se generan aleatoriamente tres pares de elementos: tendrás números en su representación 
+        decimal y sus correspondientes pares en representación binaria. Los números decimales estarán en un contenedor 
+        y los números binarios en otro.</p>
+      <p>Tu objetivo es arrastrar cada número decimal a su correspondiente número binario en un tiempo máximo de 120 segundos.</p>
+      <p>Para hacerlo, haz clic en un número decimal y mantenlo presionado si estás usando un ratón, o mantén tu dedo sobre el 
+        número decimal si estás usando un dispositivo táctil. Arrastra el número decimal al número binario correspondiente y suéltalo.</p>
+      <p>A medida que avanzas, la velocidad es esencial. El juego terminará si agotas el tiempo o si has respondido a todos los emparejamientos.</p>
+
+    </div>
+    <button id="jugar">JUGAR</button>
+  </section>
+  
+  <div id="juego" style="display: none;">
+    <div class="container">
+      <h3>¡Convert Quest! - Escoge el equivalente en Binario</h3>
+      <span id="tiempo" class="tiempo-destacado">Tiempo</span>
+      <div class="draggable-objects"></div>
+      <div class="drop-points"></div>
+      <button id="regresoNivel2"><a href="..\nivel1\index1.html">Volver al Nivel 1</a></button>
+
+
+    </div>
+      <div class="controls-container">
+        <p id="result"></p>
+        <button id="start">Continuar</button>
+      </div>
+
+    <section id="pantalla-final">
+      <h1>Resumen</h1>
+      <h3>Puntaje Obtenido</h3>
+      <span id="acertadas">
+        0
+      </span>
+      <h3 id="score1">40% de acierto</h3>
+
+    </section>
+    </section>
+    <section id="pasar-nivel">
+      <h1>Felicidades!</h1>
+      <h3>Pasaste al siguiente Nivel</h3>
+      <button id="Continuar"><a href="..\nivel3\index3.html">Nivel 3: Memory Game</a></button>
+    </section>
+
+    </section>
+    <section id="no-pasar-nivel">
+      <h1>Lo siento!</h1>
+      <h3>No pasaste al siguiente Nivel</h3>
+      <button id="regresoNivel1"><a href="..\nivel1\index1.html">Volver al Nivel 1</a></button>
+      <div id="timer"></div>
+    </section>
   </div>
-  <div class="controls-container">
-    <p id="result"></p>
-    <button id="start">Continuar</button>
-  </div>
-  <section id="pantalla-final">
-    <h1>Resumen</h1>
-    <h3>Puntaje Obtenido</h3>
-    <span id="acertadas">
-      0
-    </span>
-    <h3 id="score1">40% de acierto</h3>
-
-  </section>
-  </section>
-  <section id="pasar-nivel">
-    <h1>Felicidades!</h1>
-    <h3>Pasaste al siguiente Nivel</h3>
-    <button id="Continuar"><a href="..\nivel3\index3.html">Nivel 3: Memory Game</a></button>
-  </section>
-
-  </section>
-  <section id="no-pasar-nivel">
-    <h1>Lo siento!</h1>
-    <h3>No pasaste al siguiente Nivel</h3>
-    <button id="regresoNivel1"><a href="..\nivel1\index1.html">Volver al Nivel 1</a></button>
-    <div id="timer"></div>
-  </section>
-
   <!-- Script -->
   <script src="script2.js"></script>
 </body>

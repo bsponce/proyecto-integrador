@@ -1,12 +1,58 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
-  body {
-    background-color: #5372ef;
-  }
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #e0eafc;
+    background-image: linear-gradient(315deg, #e0eafc 0%, #cfdef3 74%);
+}
+
+#instrucciones-texto p {
+  text-align: justify;
+  padding: 0 20px;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  font-family: 'Roboto', sans-serif;  /* Cambia la familia de fuentes a Roboto */
+  letter-spacing: 0.02em;  /* Agrega un poco de espaciado entre las letras */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);  /* Agrega una ligera sombra de texto */
+  color: #333;  /* Ajusta el color del texto a un gris oscuro para una lectura más fácil */
+}
+
+
+
+
+#pantalla-instrucciones {
+  font-family: 'Roboto';
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(131, 89, 222, 0.7);
+  padding: 80px;
+  border: 5px solid #000;
+  border-radius: 30px;
+  color: #ffffff;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+h1 {
+  color: #d1face;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 2.5em;
+  text-shadow: 4px 4px 8px #000;
+  transition: transform 0.3s;
+}
+
   #pasar-nivel{
     display: none;
   }
@@ -28,6 +74,7 @@
     left: 50%;
     border-radius: 0.8em;
   }
+/*   
   .tiempo-destacado {
     display: inline-block;
     padding: 10px;
@@ -35,7 +82,23 @@
     color: #000;
     border-radius: 5px;
   
+  } */
+  #titulo-instrucciones {
+    text-align: left;
+    width: auto;  /* Ajustar automáticamente el ancho para alinear con los párrafos */
+    margin: 1em 0;  /* El primer valor ajusta el margen superior e inferior y el segundo valor el margen izquierdo y derecho */
+    margin-left: 0.7em;  /* Agregar un margen izquierdo */
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 2em;
+    color: #e3a8a8;  /* Color más suave */
+    text-shadow: 2px 2px 4px #000000;
   }
+  
+
+
+
   h3 {
     text-align: center;
     width: 60%;
@@ -99,6 +162,7 @@
     border-radius: 20px; 
 }
   .controls-container button {
+    
     font-size: 1.12em;
     padding: 0.8em 1em;
     border-radius: 0.2em;
@@ -116,6 +180,21 @@
   .hide {
     display: none;
   }
+  .tiempo-destacado {
+    display: inline-block;
+    padding: 10px;
+    background-color: #c466fc;
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.container {
+  font-weight: bold;
+  text-align: center;
+  border: 5px solid #000;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
 
 #pantalla-final span{
    
@@ -133,12 +212,8 @@
     font-weight: bold;
     border-radius: 50%;
     margin-bottom: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
-.container {
-  font-weight: bold;
-  text-align: center;
-}
-
 .botones{
   margin-bottom: 20px;
   
@@ -152,8 +227,9 @@
 .siguiente {
   float: right;
 }
+
 button{
-  background-color: #c466fc;
+  background-color: #ff4757;
   border: none;
   color: #fff;
   font-weight: bold;
@@ -161,14 +237,16 @@ button{
   cursor: pointer;
   margin: 0 20px;
   border-radius: 30px;
-  border-bottom: 4px solid #4b0872 ;
+  border-bottom: 6px solid #c23616;
   font-size: 20px;
-  
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
+
 button:hover{
-  border-bottom: 4px solid transparent;
-  background-color: #7705b9;
+  border-bottom: 6px solid transparent;
+  background-color: #ff6b81;
 }
+
 #pasar-nivel {
   font-family: 'Rammetto One';
   display: none;
